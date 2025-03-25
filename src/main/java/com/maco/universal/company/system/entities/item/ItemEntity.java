@@ -1,10 +1,13 @@
 package com.maco.universal.company.system.entities.item;
 
+import com.maco.universal.company.system.entities.supplier.SupplierItemEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Table(name = "item")
@@ -18,7 +21,9 @@ public class ItemEntity {
     Long id;
     String name;
     String description;
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     ItemCategoryEntity category;
+    @OneToMany(mappedBy = "item")
+    List<SupplierItemEntity> supplierItems;
 }
