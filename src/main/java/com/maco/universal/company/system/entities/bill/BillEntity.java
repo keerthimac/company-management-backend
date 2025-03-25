@@ -1,5 +1,7 @@
 package com.maco.universal.company.system.entities.bill;
 
+import com.maco.universal.company.system.entities.employee.EmployeeEntity;
+import com.maco.universal.company.system.entities.purchaseOrder.PurchaseOrderEntity;
 import com.maco.universal.company.system.entities.supplier.SupplierEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,5 +28,10 @@ public class BillEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "supplier_id" , nullable = false)
     SupplierEntity supplier;
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "employee_id" , nullable = false)
+    EmployeeEntity employee;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "purchase_order_id" , nullable = false)
+    PurchaseOrderEntity purchaseOrder;
 }

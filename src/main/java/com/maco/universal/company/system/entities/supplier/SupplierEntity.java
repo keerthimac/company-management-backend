@@ -28,6 +28,6 @@ public class SupplierEntity {
     List<SupplierItemEntity> items;
     @OneToMany(mappedBy = "supplier")
     List<BillEntity> bills;
-    @OneToMany(mappedBy = "supplier")
+    @OneToMany(mappedBy = "supplier",cascade = CascadeType.ALL)
     List<PurchaseOrderEntity> purchaseOrders;
 }

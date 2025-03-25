@@ -1,5 +1,7 @@
 package com.maco.universal.company.system.entities.item;
 
+import com.maco.universal.company.system.entities.requestOrder.RequestOrderDetailsEntity;
+import com.maco.universal.company.system.entities.requestOrder.RequestOrderEntity;
 import com.maco.universal.company.system.entities.supplier.SupplierItemEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,4 +28,6 @@ public class ItemEntity {
     ItemCategoryEntity category;
     @OneToMany(mappedBy = "item")
     List<SupplierItemEntity> supplierItems;
+    @OneToMany(mappedBy = "item")
+    List<RequestOrderDetailsEntity> requestOrder;
 }

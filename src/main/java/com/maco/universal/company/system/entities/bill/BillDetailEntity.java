@@ -1,5 +1,6 @@
 package com.maco.universal.company.system.entities.bill;
 
+import com.maco.universal.company.system.entities.supplier.SupplierItemEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,5 +21,7 @@ public class BillDetailEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bill_id" , nullable = false)
     BillEntity bill;
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="sup_item_id",nullable = false)
+    SupplierItemEntity supplierItem;
 }
