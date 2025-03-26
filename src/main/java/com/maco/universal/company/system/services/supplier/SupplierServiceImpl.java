@@ -1,4 +1,4 @@
-package com.maco.universal.company.system.services;
+package com.maco.universal.company.system.services.supplier;
 
 import org.springframework.stereotype.Service;
 
