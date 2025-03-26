@@ -21,7 +21,7 @@ import java.util.List;
 public class SupplierItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Integer id;
     Double price;
     String code;
     Date priceEffectiveFrom;

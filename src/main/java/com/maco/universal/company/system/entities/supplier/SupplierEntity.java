@@ -19,7 +19,7 @@ import java.util.List;
 public class SupplierEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Integer id;
     String name;
     String location;
     @Column(name = "contact_info")

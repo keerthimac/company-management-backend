@@ -20,7 +20,7 @@ import java.util.List;
 public class ItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Integer id;
     String name;
     String description;
     @ManyToOne(cascade = CascadeType.ALL)

@@ -1,6 +1,7 @@
 package com.maco.universal.company.system.entities.bill;
 
 import com.maco.universal.company.system.entities.employee.EmployeeEntity;
+import com.maco.universal.company.system.entities.grn.GrnEntity;
 import com.maco.universal.company.system.entities.purchaseOrder.PurchaseOrderEntity;
 import com.maco.universal.company.system.entities.supplier.SupplierEntity;
 import jakarta.persistence.*;
@@ -21,7 +22,7 @@ import java.util.List;
 public class BillEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private Date date;
     @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL)
     private List<BillDetailEntity> details;
@@ -34,4 +35,6 @@ public class BillEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "purchase_order_id" , nullable = false)
     PurchaseOrderEntity purchaseOrder;
+    @OneToOne(mappedBy = "bill")
+    GrnEntity grn;
 }

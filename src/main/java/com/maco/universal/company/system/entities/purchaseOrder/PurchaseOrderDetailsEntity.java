@@ -16,7 +16,7 @@ import lombok.Setter;
 public class PurchaseOrderDetailsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Integer id;
     int quantity;
     @ManyToOne
     @JoinColumn(name = "purchase_order_id",nullable = false)

@@ -20,7 +20,7 @@ import lombok.Setter;
 public class GrnEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Integer id;
     String grnNo;
     String comments;
     @ManyToOne

@@ -22,7 +22,7 @@ import java.util.List;
 public class PurchaseOrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Integer id;
     Date date;
     String status;
     Date expectedDelivery;

@@ -16,7 +16,7 @@ import lombok.Setter;
 public class BillDetailEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     int quantity;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bill_id" , nullable = false)

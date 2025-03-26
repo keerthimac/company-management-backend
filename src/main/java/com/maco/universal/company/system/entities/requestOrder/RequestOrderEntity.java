@@ -21,7 +21,7 @@ import java.util.List;
 public class RequestOrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Double id;
+    Integer id;
     Date date;
     @ManyToOne
     @JoinColumn(name = "employee_id",nullable = false)

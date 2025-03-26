@@ -16,7 +16,7 @@ import lombok.Setter;
 public class RequestOrderDetailsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Integer id;
     String priority;
     Double quantity;
     @ManyToOne

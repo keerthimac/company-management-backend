@@ -21,7 +21,7 @@ import java.util.Set;
 public class SiteEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Integer id;
     String name;
     String location;
     @OneToMany(mappedBy = "site")
