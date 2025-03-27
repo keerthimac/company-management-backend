@@ -17,7 +17,6 @@ public class RequestOrderDetailsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
-    String priority;
     Double quantity;
     @ManyToOne
     @JoinColumn(name = "request_order_id")

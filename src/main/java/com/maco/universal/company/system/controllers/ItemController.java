@@ -1,7 +1,6 @@
 package com.maco.universal.company.system.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.maco.universal.company.system.dto.ItemCategoryDto;
+import com.maco.universal.company.system.dto.item.ItemCategoryDto;
 import com.maco.universal.company.system.services.item.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

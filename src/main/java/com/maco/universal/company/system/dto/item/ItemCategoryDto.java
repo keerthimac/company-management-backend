@@ -1,6 +1,8 @@
-package com.maco.universal.company.system.dto;
+package com.maco.universal.company.system.dto.item;
 
 import lombok.*;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -10,4 +12,5 @@ import lombok.*;
 public class ItemCategoryDto {
     Integer id;
     String category;
+    List<ItemDto> items;
 }

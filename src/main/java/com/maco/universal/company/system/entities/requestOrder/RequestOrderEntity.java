@@ -23,6 +23,7 @@ public class RequestOrderEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     Date date;
+    String priority;
     @ManyToOne
     @JoinColumn(name = "employee_id",nullable = false)
     EmployeeEntity employee;

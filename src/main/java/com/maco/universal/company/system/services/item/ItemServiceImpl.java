@@ -1,7 +1,7 @@
 package com.maco.universal.company.system.services.item;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.maco.universal.company.system.dto.ItemCategoryDto;
+import com.maco.universal.company.system.dto.item.ItemCategoryDto;
 import com.maco.universal.company.system.entities.item.ItemCategoryEntity;
 import com.maco.universal.company.system.repositories.item.ItemCategoryRepository;
 import lombok.RequiredArgsConstructor;
