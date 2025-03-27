@@ -21,5 +21,4 @@ public class ItemCategoryEntity {
     String category;
     @OneToMany(mappedBy = "category")
     List<ItemEntity> item;
-
 }
