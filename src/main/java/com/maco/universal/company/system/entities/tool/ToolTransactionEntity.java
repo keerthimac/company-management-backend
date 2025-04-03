@@ -11,6 +11,8 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "tool_transaction")
 @Getter
 @Setter
 @AllArgsConstructor
